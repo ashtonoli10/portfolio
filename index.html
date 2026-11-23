@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ashton Oliphant | Portfolio</title>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Same nav on every page -->
+  <nav class="site-nav">
+    <div class="container d-flex flex-wrap align-items-center gap-3 py-2">
+      <a class="nav-name" href="index.html">Ashton Oliphant</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="about-me.html">About Me</a>
+      <a href="index.html#contact">Contact</a>
+      <button id="theme-btn" class="btn btn-sm btn-outline-light ms-auto" type="button">Dark mode</button>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <!-- Profile -->
+    <section id="profile" class="mb-5">
+      <h1>Ashton Oliphant</h1>
+      <p class="lead">I'm a student who loves cars, especially working on them and fixing them myself.
+        I also edit videos, take photos, and make art. In this class I learned to build web pages with
+        HTML, CSS, Bootstrap, and JavaScript.</p>
+      <p>I'm looking for work in web design or in the auto industry, where I can solve problems
+        and build things people use.</p>
+    </section>
+
+    <!-- Showcase: 1 column on a phone, 3 columns on a wide screen -->
+    <section id="projects" class="mb-5">
+      <h2>Projects</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <article class="card h-100">
+            <img src="garage.svg" class="card-img-top" alt="My Garage page with a text box, an Add car button, and a list of two cars">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5">My Garage</h3>
+              <p>A page where you type a car and click a button to add it to a list. I built it with AI help in Assignment 6, then explained every line it wrote.</p>
+              <a href="garage.html" class="btn btn-brand mt-auto align-self-start">See it</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100">
+            <img src="skills.svg" class="card-img-top" alt="About Me page with a list of four skills">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5">About Me Skills List</h3>
+              <p>A page that lists what I'm good at. I stored my skills in a JavaScript array and used a loop to build the list on the page.</p>
+              <a href="about-me.html" class="btn btn-brand mt-auto align-self-start">See it</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100">
+            <img src="credit.svg" class="card-img-top" alt="Credit score gauge showing a score of 720 rated Good">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5">Credit Score Page</h3>
+              <p>A page where you enter a credit score and it tells you if it is Poor, Fair, Good, Very good, or Excellent. It uses a click event and an if / else if chain in JavaScript.</p>
+              <a href="credit-score.html" class="btn btn-brand mt-auto align-self-start">See it</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Assignment 5 list, still built by JavaScript from the array -->
+    <section id="skills" class="card card-body mb-5">
+      <h2>What I'm Good At</h2>
+      <ul id="list"></ul>
+      <p id="count" class="mt-3"></p>
+    </section>
+
+    <!-- Contact form -->
+    <section id="contact" class="mb-5">
+      <h2>Contact Me</h2>
+      <form id="contact-form" novalidate>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message (at least 20 characters)</label>
+          <textarea id="message" class="form-control" rows="4" required></textarea>
+          <p id="message-error" class="form-msg"></p>
+        </div>
+        <button type="submit" class="btn btn-brand">Send</button>
+        <p id="thanks" class="form-msg mt-3"></p>
+      </form>
+    </section>
+
+    <footer><p>&copy; 2026 Ashton Oliphant</p></footer>
+  </main>
+
+  <script src="script.js"></script>
+
+  <!--
+  Assignment 7:
+  1. The design principle I fixed, and what I changed: Alignment. My project cards had different
+     heights and the buttons did not line up, so I gave every card h-100 and put them in a
+     Bootstrap row, so the cards line up in one row on a wide screen and stack in one column on a phone.
+  2. The tools and AI I used: VS Code, Live Server, Bootstrap 5, GitHub Desktop, Cloudflare,
+     and Claude (AI) to help write and check my code.
+  -->
+</body>
+</html>

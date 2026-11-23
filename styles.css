@@ -1,0 +1,70 @@
+* { box-sizing: border-box; }
+
+/* All my colors live here */
+:root {
+  --brand: #800000;
+  --text: #1a1a1a;
+  --bg: #ffffff;
+  --card-bg: #ffffff;
+  --nav-bg: #800000;
+  --nav-text: #ffffff;
+  --error: #b00020;
+  --success: #146c43;
+  --space: 1rem;
+}
+
+/* Dark mode: the button adds class="dark" to body, which swaps the colors */
+body.dark {
+  --brand: #ff8a8a;
+  --text: #f1f1f1;
+  --bg: #121212;
+  --card-bg: #1f1f1f;
+  --nav-bg: #2b0000;
+  --error: #ff8a80;
+  --success: #75d69c;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; }
+
+h1 { color: var(--brand); }
+h2 { font-size: 1.4rem; }
+
+.site-nav { background-color: var(--nav-bg); }
+.site-nav a { color: var(--nav-text); text-decoration: none; }
+.site-nav a:hover { text-decoration: underline; }
+.nav-name { font-weight: bold; }
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--text);
+}
+
+.form-control,
+.form-control:focus {
+  background-color: var(--card-bg);
+  color: var(--text);
+}
+
+.btn-brand {
+  background-color: var(--brand);
+  color: var(--bg);
+  border: none;
+}
+.btn-brand:hover { opacity: 0.85; color: var(--bg); }
+
+.form-msg { margin: 0.25rem 0 0; }
+.form-msg.error { color: var(--error); }
+.form-msg.success { color: var(--success); }
+
+#list li { padding: 0.15rem 0; }
+#count { font-style: italic; }
+.garage-input { max-width: 20rem; }
