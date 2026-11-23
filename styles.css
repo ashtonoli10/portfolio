@@ -68,3 +68,4 @@ h2 { font-size: 1.4rem; }
 #list li { padding: 0.15rem 0; }
 #count { font-style: italic; }
 .garage-input { max-width: 20rem; }
+.card-photo { height: 200px; object-fit: cover; }

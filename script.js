@@ -69,7 +69,7 @@ const carList = document.querySelector("#car-list");
 const carCount = document.querySelector("#car-count");
 
 if (addCar) {
-  carCount.textContent = "Cars in my garage: 0";
+  carCount.textContent = "No cars shared yet. Be the first!";
 
   addCar.addEventListener("click", function () {
     const car = carInput.value.trim();
@@ -80,7 +80,7 @@ if (addCar) {
     const li = document.createElement("li");
     li.textContent = car;
     carList.appendChild(li);
-    carCount.textContent = "Cars in my garage: " + cars.length;
+    carCount.textContent = "Welcome to the community! People who have added their car: " + cars.length;
     carInput.value = "";
   });
 }
